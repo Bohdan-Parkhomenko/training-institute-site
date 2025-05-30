@@ -235,17 +235,20 @@
         align-items: center;
     }
     .hero-content{
-        padding: 0 16px;
         width: 100%;
+
+
     }
 
     .hero-content h1 {
+        padding: 0 16px;
         margin-top: 24px;
         font-size: 42px;
         line-height: 50px;
     }
 
     .hero-content p {
+        padding: 0 16px;
         font-size: 16px;
         line-height: 24px;
         margin: 20px 0 30px 0;
@@ -253,11 +256,12 @@
 
     .button-group {
         width: 100%;
-        justify-content: space-between;
+        gap: 0;
     }
 
     .btn {
-        width: 50%;
+        width: 45%;
+        margin: 16px;
     }
 
     .hero-image img {
