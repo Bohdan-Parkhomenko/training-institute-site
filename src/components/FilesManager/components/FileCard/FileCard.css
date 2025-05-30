@@ -1,0 +1,84 @@
+.file-card {
+    position: relative;
+    width: 273px;
+    height: 273px;
+    overflow: hidden;
+
+    border: 1px solid #686e6f;
+    border-radius: 6px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    transition: border 0.2s ease-in-out;
+    cursor: pointer;
+    box-sizing: border-box;
+}
+
+.file-icon {
+    width: 48px;
+    height: 48px;
+    background-color: #4caf50;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 24px;
+    color: white;
+    margin-bottom: 10px;
+}
+
+.file-label {
+    font-size: 14px;
+    font-weight: 500;
+    color: #333;
+}
+
+
+.checkmark {
+    position: absolute;
+    top: 6px;
+    left: 6px;
+    color: #25a144;
+    font-size: 14px;
+}
+
+.file-card.selected::after {
+    content: "✕";
+    position: absolute;
+    top: 6px;
+    right: 6px;
+    font-size: 16px;
+    color: #e33;
+    cursor: pointer;
+}
+
+/* Нижні іконки */
+.actions {
+    position: absolute;
+    bottom: 8px;
+    left: 8px;
+    right: 8px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.actions button {
+    background-color: rgb(233, 246, 248);
+    border: none;
+    border-radius: 4px;
+    padding: 4px;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+
+.actions button:hover {
+    background-color: rgb(226, 240, 243);
+
+}
+
+.actions button img {
+    width: 16px;
+    height: 16px;
+}

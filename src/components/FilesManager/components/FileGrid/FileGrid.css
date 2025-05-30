@@ -1,0 +1,8 @@
+.file-grid {
+    display: grid; /* ← ОЦЕ ПРАВИЛЬНО */
+    grid-template-columns: repeat(auto-fill, minmax(273px, 1fr));
+    gap: 24px;
+    padding: 32px 48px;
+    justify-items: center;
+    align-items: start;
+}
