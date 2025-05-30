@@ -1,4 +1,4 @@
-import React, { useRef } from "react";
+import React, {useRef} from "react";
 import "./Toolbar.css";
 
 import DownloadSimple from "../../../../assets/FilesManager/DownloadSimple.svg";
@@ -9,7 +9,7 @@ import MagnifyingGlassPlus from "../../../../assets/FilesManager/MagnifyingGlass
 import UploadSimple from "../../../../assets/FilesManager/UploadSimple.svg";
 import Union from "../../../../assets/FilesManager/Union.svg";
 
-import { useFiles } from "../../../../context/FilesContext";
+import {useFiles} from "../../../../context/FilesContext";
 import {
     addFile,
     renameFile,
@@ -82,27 +82,28 @@ const Toolbar = () => {
 
     return (
         <div className="toolbar">
-            <label className="checkbox-select-all">
+            <div className="toolbar-left">
+                <label className="checkbox-select-all">
+                    <input
+                        type="checkbox"
+                        checked={isAllSelected}
+                        onChange={toggleSelectAll}
+                    />
+                </label>
+
+                <button onClick={handleUploadClick}><img src={UploadSimple} alt="Upload"/></button>
                 <input
-                    type="checkbox"
-                    checked={isAllSelected}
-                    onChange={toggleSelectAll}
+                    type="file"
+                    ref={fileInputRef}
+                    onChange={handleFileChange}
+                    style={{display: "none"}}
                 />
-            </label>
-
-            <button onClick={handleUploadClick}><img src={UploadSimple} alt="Upload"/></button>
-            <input
-                type="file"
-                ref={fileInputRef}
-                onChange={handleFileChange}
-                style={{ display: "none" }}
-            />
-            <button onClick={handleDelete}><img src={Trash} alt="Trash"/></button>
-            <button onClick={handleRename}><img src={PencilSimple} alt="Rename"/></button>
-            <button onClick={handleDownload}><img src={DownloadSimple} alt="Download"/></button>
-            <button><img src={ShareNetwork} alt="Share"/></button>
-            <button><img src={MagnifyingGlassPlus} alt="Zoom"/></button>
-
+                <button onClick={handleDelete}><img src={Trash} alt="Trash"/></button>
+                <button onClick={handleRename}><img src={PencilSimple} alt="Rename"/></button>
+                <button onClick={handleDownload}><img src={DownloadSimple} alt="Download"/></button>
+                <button><img src={ShareNetwork} alt="Share"/></button>
+                <button><img src={MagnifyingGlassPlus} alt="Zoom"/></button>
+            </div>
             <div className="filter">
                 <select value={sortBy} onChange={(e) => setSortBy(e.target.value)}>
                     <option value="name">Ім’я</option>

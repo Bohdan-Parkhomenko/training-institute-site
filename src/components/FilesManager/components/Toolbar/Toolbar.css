@@ -7,6 +7,10 @@
     box-sizing: border-box;
 }
 
+.toolbar-left {
+    display: flex;
+}
+
 .toolbar button {
     background: none;
     border: none;
@@ -135,3 +139,12 @@
     transform: rotate(45deg);
 }
 
+@media (max-width: 520px) {
+    .toolbar {
+        flex-direction: column;
+    }
+
+    .toolbar .filter{
+        margin: 0;
+    }
+}
