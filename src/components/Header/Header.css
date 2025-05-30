@@ -1,0 +1,295 @@
+/* ====== Header Layout ====== */
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 30px 64px;
+    background-color: #f4f8fc;
+    position: relative;
+    z-index: 10;
+}
+
+
+.header-left {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+}
+
+.header-logo {
+    height: 30px;
+}
+
+.header-brand {
+    height: 35px;
+    display: flex;
+    align-items: center;
+    padding-left: 16px;
+    font-size: 10px;
+    font-weight: 700;
+    line-height: 13px;
+    color: #1e1e1e;
+    border-left: 1.5px solid #f1c40f;
+}
+
+/* ====== Header Right Section ====== */
+
+.header-right {
+    display: flex;
+    align-items: center;
+    gap: 32px;
+    flex-wrap: wrap;
+}
+
+.header-phone {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    font-size: 16px;
+    color: #1e1e1e;
+}
+
+.header-socials {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.header-socials a img {
+    width: 20px;
+    height: 20px;
+    margin: 0 4px;
+    cursor: pointer;
+    transition: opacity 0.3s ease;
+}
+
+.header-socials a img:hover {
+    opacity: 0.7;
+}
+
+.header-donate {
+    padding: 0 12px;
+    border-left: 2px solid #f5b400;
+    border-right: 2px solid #f5b400;
+}
+
+.header-donate img {
+    width: 35px;
+    height: 35px;
+    margin: 0 12px;
+}
+
+.header-login {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    border: none;
+    background: none;
+    cursor: pointer;
+    text-decoration: none;
+    color: #1e1e1e;
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 26px;
+}
+
+.header-login img {
+    width: 20px;
+    height: 20px;
+}
+
+/* ====== Navigation Buttons ====== */
+
+.main-nav {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+}
+
+.nav-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 8px 20px;
+    height: 42px;
+    font-size: 16px;
+    font-weight: 700;
+    color: #1e1e1e;
+    border: none;
+    background: transparent;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+}
+
+.nav-button:hover {
+    background: rgba(0, 0, 0, 0.04);
+}
+
+.nav-button--highlighted {
+    background: rgb(255, 182, 0);
+    color: white;
+    box-shadow:
+            0px 3px 1px -2px rgba(0, 0, 0, 0.2),
+            0px 2px 2px 0px rgba(0, 0, 0, 0.14),
+            0px 1px 5px 0px rgba(0, 0, 0, 0.12);
+}
+
+.dropdown-icon {
+    width: 24px;
+    height: 24px;
+    margin-left: 6px;
+    transition: transform 0.2s ease;
+    pointer-events: none;
+    position: relative;
+    top: -1px;
+    left: 0;
+}
+
+/* ====== Mobile Footer (Fixed) ====== */
+
+.mobile-footer {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding: 16px;
+    background-color: #f4f8fc;
+    border-top: 1px solid #ddd;
+    z-index: 998;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+}
+
+.mobile-footer-center {
+    display: flex;
+    gap: 12px;
+    align-items: center;
+}
+
+.mobile-footer .header-phone {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 16px;
+    gap: 6px;
+    color: #1e1e1e;
+}
+
+.mobile-footer .header-socials {
+    display: flex;
+    justify-content: center;
+    gap: 12px;
+}
+
+.mobile-footer .header-socials img {
+    width: 20px;
+    height: 20px;
+}
+
+/* ====== Visibility for Mobile Menu Button ====== */
+
+.menu-icon-left {
+    display: none;
+}
+
+/* ====== Courses Wrapper ====== */
+
+.courses-wrapper {
+    position: relative;
+    z-index: 4;
+}
+
+/* ====== Responsive Media Queries ====== */
+
+@media (max-width: 1600px) {
+    .header {
+        padding: 20px;
+        justify-content: center;
+        text-align: center;
+        gap: 0;
+    }
+
+    .header-left {
+        gap: 0;
+        align-items: center;
+    }
+
+    .logo {
+        flex-direction: column;
+        gap: 0;
+        text-align: center;
+        margin-right: 10px;
+    }
+
+    .header-brand {
+        display: none;
+    }
+
+    .header-right {
+        justify-content: center;
+        gap: 2px;
+    }
+
+    .main-nav {
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 0;
+    }
+
+    .nav-button {
+        padding: 5px;
+        height: 30px;
+    }
+
+    .menu-icon {
+        margin: 0 26px;
+    }
+
+    .courses-panel {
+        justify-content: center;
+        padding: 16px;
+    }
+
+    .course-category {
+        width: 100%;
+        max-width: 540px;
+    }
+
+    .course-info {
+        width: 100%;
+    }
+}
+
+@media (max-width: 1120px) {
+    .header-socials,
+    .header-phone {
+        display: none;
+    }
+}
+
+@media (max-width: 830px) {
+    .nav-button {
+        display: none;
+    }
+
+    .header-donate {
+        border-left: 0;
+    }
+
+    .menu-icon-left {
+        display: flex;
+    }
+}

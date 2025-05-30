@@ -1,4 +1,18 @@
-.App {
-  font-family: sans-serif;
-  text-align: center;
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    margin: 0;
+    padding: 0;
+    background: #F4F9FF;
 }
+
+.all {
+    position: fixed;
+    top: 0;
+    opacity: 0.5; /* 90% прозорості */
+    background-color: #000; /* або можна прозорий фон */
+    z-index: 9999;
+
+}
+
