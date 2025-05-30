@@ -1,18 +1,21 @@
-import React, { useState } from "react";
+import { useFiles } from "../../../../context/FilesContext";
 import FileCard from "../FileCard/FileCard";
 import "./FileGrid.css";
 
 const FileGrid = () => {
-    const files = new Array(12).fill("Typography");
-    const [selectedIndex, setSelectedIndex] = useState(null);
+    const { sortedFiles, selectedFiles, toggleFileSelection } = useFiles();
 
     return (
         <div className="file-grid">
-            {files.map((file, index) => (
+            {sortedFiles.map((file) => (
                 <FileCard
-                    key={index}
-                    selected={index === selectedIndex}
-                    onClick={() => setSelectedIndex(index === selectedIndex ? null : index)}
+                    key={file.id}
+                    id={file.id}
+                    name={file.name}
+                    size={file.size}
+                    createdAt={file.createdAt}
+                    selected={selectedFiles.includes(file.id)}
+                    onClick={() => toggleFileSelection(file.id)}
                 />
             ))}
         </div>

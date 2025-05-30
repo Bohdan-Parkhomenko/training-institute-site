@@ -1,7 +1,7 @@
 .toolbar {
     display: flex;
     align-items: center;
-    padding: 12px 20px;
+    padding: 12px 48px;
 
     gap: 14px;
     box-sizing: border-box;
@@ -100,3 +100,38 @@
     padding: 0 2px;
     pointer-events: none;
 }
+
+.checkbox-select-all {
+    display: flex;
+    align-items: center;
+    margin-right: 12px; /* відступ від інших кнопок */
+}
+
+.checkbox-select-all input[type="checkbox"] {
+    width: 20px;
+    height: 20px;
+    appearance: none;
+    border: 2px solid #555;
+    border-radius: 4px;
+    cursor: pointer;
+    background-color: transparent;
+    position: relative;
+    transition: all 0.2s ease;
+}
+
+.checkbox-select-all input[type="checkbox"]:checked {
+    background-color: #555;
+}
+
+.checkbox-select-all input[type="checkbox"]:checked::after {
+    content: '';
+    position: absolute;
+    top: 2px;
+    left: 6px;
+    width: 4px;
+    height: 10px;
+    border: solid white;
+    border-width: 0 2px 2px 0;
+    transform: rotate(45deg);
+}
+
